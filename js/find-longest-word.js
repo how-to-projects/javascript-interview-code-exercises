@@ -15,4 +15,16 @@ const longestWord = (words) => {
     return arr[0];
 }
 
-console.log(longestWord('the quick brown cow jumped'));
+const upperCase = (term) => {
+    const words = term.split('');
+    const reExp = new RegExp('[aeiou]', 'g');
+
+    const m = words.filter(itm => {
+        return itm.match(reExp);
+    })
+
+    console.log(m);
+}
+
+console.log(upperCase('the quick brown cow jumped'));
+
